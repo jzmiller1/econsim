@@ -165,7 +165,7 @@ def aggregate_supply(agents, max_price=10, steps=100):
 def find_market_equilibrium(supply, demand):
     surplus = dict(zip(supply.keys(),
                        [s - d for s, d in zip(supply.values(), demand.values())]))
-    min_surplus = np.min(np.abs(surplus.values()))
+    min_surplus = np.min(np.abs(list(surplus.values())))
     equilibrium_price = [p for p in surplus if abs(surplus[p]) == min_surplus][0]
     equilibrium_quantity = supply[equilibrium_price]
     return (equilibrium_price, equilibrium_quantity)

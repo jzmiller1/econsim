@@ -47,7 +47,7 @@ def report(distribution=populations.gauss,
     fmt = '{:6}' + '{:10.2f} ' * len(percentiles)
     print(('{:6}' + '{:>10} ' * len(percentiles)).format('', *map(percentile_name, percentiles)))
     for (label, nums) in [('start', results[0]), ('mid', results[len(results)//2]), ('final', results[-1])]:
-        print fmt.format(label, *nums)
+        print(fmt.format(label, *nums))
     # Plot results
     col = 1.0
     fig, axes = plt.subplots(1, 2)
@@ -58,8 +58,8 @@ def report(distribution=populations.gauss,
         axes[1].plot(norm_line, color=(col, 0, 1-col))
         col *= 0.75
     '''
-    axes[0].scatter(np.array(demand.values())/1000., demand.keys(), c='g')
-    axes[0].scatter(np.array(supply.values())/1000., supply.keys())
+    axes[0].scatter(np.array(list(demand.values()))/1000., list(demand.keys()), c='g')
+    axes[0].scatter(np.array(list(supply.values()))/1000., list(supply.keys()))
     axes[0].plot([eqbm_price] * len(prices), 'r')
     axes[0].set_xlim(0, 100)
     axes[0].set_ylim(0, 5)
