@@ -2,6 +2,7 @@
 Created on Jan 22, 2014
 
 @author: Peter Norvig, Cliff Clive
+
 """
 
 import matplotlib.pyplot as plt

@@ -1,8 +1,9 @@
-'''
+"""
 Created on Jan 22, 2014
 
 @author: Peter Norvig
-'''
+
+"""
 
 import random
 
